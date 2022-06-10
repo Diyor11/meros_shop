@@ -11,6 +11,7 @@ import Katalog from '../Modals/Katalog'
 import { SearchInpit } from '../../styles/global.elements'
 import searchB from './Img/searchBlack.svg'
 import AllCategMob from '../Modals/AllCategMob'
+import { NavLink } from 'react-router-dom'
 
 function MiddleNav() {
 
@@ -45,10 +46,10 @@ function MiddleNav() {
                 <img src={search} alt="icon" />
             </button>
         </form>
-        <button className='lg:flex hidden items-center'>
+        <NavLink to='/users/login' className='lg:flex hidden items-center'>
             <img src={profile} alt="icon" />
             <span className='ml-2 text-[#273142]'>Kirish</span>
-        </button>
+        </NavLink>
         <AllCateg setCategory={setCategory} onClose={() => setTypes(false)} show={types} />
         <AllCategMob onClose={() => setTypes(false)} show={types} />
         <Katalog onClose={() => setKatalog(false)} show={katalog} />
