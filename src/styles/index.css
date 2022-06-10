@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+body.active-modal{
+    overflow: hidden;
+}
+
+button, input{
+    outline: none;
+}
+
+.section-title{
+    @apply text-2xl font-bold mb-2 text-[#273142] font-sans
+}
+
+.main-text-color{
+    color: #273142;
+}
+
+.font-roboto{
+    font-family: 'Roboto', sans-serif;
+}
+
+.katalog-btn-shadow{
+    box-shadow: inset 0px -2px 4px rgb(0 0 0 / 10%), inset 0px 2px 4px rgb(0 0 0 / 10%);
+}
+
+.footer-item{
+    @apply text-[#666] font-normal font-roboto text-[16px] mt-2 cursor-pointer hover:underline
+}
+
+.scrolbar::-webkit-scrollbar {
+    background-color: white;
+    width: 3px;
+}
+
+.scrolbar-none::-webkit-scrollbar{
+    display: none;
+}
+
+.scrolbar::-webkit-scrollbar-thumb {
+    background-color: rgb(153, 153, 153);
+    border-radius: 2px;
+}
+
+.scrolbar::-webkit-scrollbar-track{
+    width: 3px;
+}
+
+.hover-text:hover > a{
+    color: #F5921c;
+}
+
+.shadow-top{
+    box-shadow: 0 -4px 20px rgba(5, 5, 5, 0.07);
+}
+
+@media(min-width: 1024px){
+    #searchbar::placeholder{
+        color: transparent;
+    }
+}
+/* ------ animations -------- */
+
+.anim-fade-down{
+    animation: fade .3s ease-out 0s 1;
+    transform: translateY(0)
+}
+
+@keyframes fade {
+    from {
+      opacity: 0.4;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+    }
+}
